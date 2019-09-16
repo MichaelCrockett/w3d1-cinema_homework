@@ -70,9 +70,14 @@ To delete rows in multiple tables (two methods)
 
     <<OR>>
 
-    Create a foreign key constraint so that if you delete a row in a table, the corresponding rows the related table are also removed automatically.
+    Create a foreign key constraint so that if you delete a row
+    in a table, the corresponding rows the related table are
+    also removed automatically.
 
-    In case the database management system does not support the foreign key constraint, you have to execute both DELETE statements in a single transaction to make sure that the statements execute in all-or-nothing mode.
+    In case the database management system does not support
+    the foreign key constraint, you have to execute both DELETE
+    statements in a single transaction to make sure that the
+    statements execute in all-or-nothing mode.
 
 
 
