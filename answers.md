@@ -49,3 +49,32 @@ UPDATE movies
 SET show_time = '20.45'
 WHERE title = 'Iron Man 3'
 ```
+
+```
+<<EXTENSION>>
+
+To delete one row from a table
+DELETE FROM <table_name>
+WHERE row_id number = <value>
+
+To delete all rows in a table
+ DELETE FROM <table_name>
+
+To delete rows in multiple tables (two methods)
+  execute two DELETE statements
+    DELETE FROM table
+    WHERE <value> = <value to be deleted>
+      and
+    DELETE FROM other table
+    WHERE <value> = <value to be deleted>
+
+    <<OR>>
+
+    Create a foreign key constraint so that if you delete a row in a table, the corresponding rows the related table are also removed automatically.
+
+    In case the database management system does not support the foreign key constraint, you have to execute both DELETE statements in a single transaction to make sure that the statements execute in all-or-nothing mode.
+
+
+
+
+```
